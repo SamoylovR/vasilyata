@@ -70,9 +70,6 @@ namespace Calculator
                 }
             }
             int j = 0;
-
-            //Вот эту часть желательно как-то подправить, накидывайте идеи и если прочитали это, то напишите в беседу ":)"  :)
-            //////////////////////////////
             foreach(char o in operations)
             {
                 if (o == '*')
@@ -97,7 +94,7 @@ namespace Calculator
 
             foreach (double n in numbers)
                 sum += n;
-            //////////////////////////////
+
             Console.WriteLine($"Результат: {sum}");
         }
     }
