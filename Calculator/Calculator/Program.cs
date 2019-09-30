@@ -15,7 +15,7 @@ namespace Calculator
             List<char> operations = new List<char> { };
 
             bool decodingStatus = true;
-            
+
             while (decodingStatus)
             {
                 expression = Console.ReadLine();
