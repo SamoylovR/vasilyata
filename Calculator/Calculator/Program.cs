@@ -96,6 +96,7 @@ namespace Calculator
                 sum += n;
 
             Console.WriteLine($"Результат: {sum}");
+            Console.WriteLine("Первое включение");
         }
     }
 }
