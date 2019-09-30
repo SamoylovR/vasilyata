@@ -15,7 +15,7 @@ namespace Calculator
             List<char> operations = new List<char> { };
 
             bool decodingStatus = true;
-            
+
             while (decodingStatus)
             {
                 expression = Console.ReadLine();
@@ -27,7 +27,7 @@ namespace Calculator
                 for (int i = 0; i < expression.Length; i++)
                 {
                     if (expression[i] == ',' || expression[i] == '.')
-                        count++;                    
+                        count++;
 
                     if ((!byte.TryParse(expression[i].ToString(), out byte x) && count == 2) || !byte.TryParse(expression[expression.Length - 1].ToString(), out byte c))
                     {
@@ -70,19 +70,20 @@ namespace Calculator
                 }
             }
             int j = 0;
-            foreach(char o in operations)
+
+            foreach (char o in operations)
             {
                 if (o == '*')
                 {
                     numbers[j + 1] = numbers[j] * numbers[j + 1];
                     numbers[j] = 0;
                 }
-                else if(o == '/')
+                else if (o == '/')
                 {
                     numbers[j + 1] = numbers[j] / numbers[j + 1];
                     numbers[j] = 0;
                 }
-                else if(o == '-')
+                else if (o == '-')
                 {
                     numbers[j + 1] = -numbers[j + 1];
                 }
