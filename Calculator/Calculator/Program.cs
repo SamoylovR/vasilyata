@@ -8,7 +8,7 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите выражение:");
+            Console.WriteLine("Введите выражение:");// эгегей я не гей!!!
             string expression = "";
 
             List<double> numbers = new List<double> { };
