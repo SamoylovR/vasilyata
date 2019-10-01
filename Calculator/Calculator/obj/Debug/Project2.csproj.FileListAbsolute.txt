@@ -1,0 +1,7 @@
+D:\visual\василята\Project2\Project2\bin\Debug\Project2.exe.config
+D:\visual\василята\Project2\Project2\bin\Debug\Project2.exe
+D:\visual\василята\Project2\Project2\bin\Debug\Project2.pdb
+D:\visual\василята\Project2\Project2\obj\Debug\Project2.csprojAssemblyReference.cache
+D:\visual\василята\Project2\Project2\obj\Debug\Project2.csproj.CoreCompileInputs.cache
+D:\visual\василята\Project2\Project2\obj\Debug\Project2.exe
+D:\visual\василята\Project2\Project2\obj\Debug\Project2.pdb
