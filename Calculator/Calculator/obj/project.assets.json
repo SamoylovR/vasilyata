@@ -692,19 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Data\\Projects\\vasilyata\\Calculator\\Calculator\\Calculator.csproj",
       "projectName": "Calculator",
       "projectPath": "C:\\Data\\Projects\\vasilyata\\Calculator\\Calculator\\Calculator.csproj",
       "packagesPath": "C:\\Users\\samoy\\.nuget\\packages\\",
       "outputPath": "C:\\Data\\Projects\\vasilyata\\Calculator\\Calculator\\obj\\",
-=======
-      "projectUniqueName": "C:\\Data\\Projects\\Calculator\\Calculator\\Calculator.csproj",
-      "projectName": "Calculator",
-      "projectPath": "C:\\Data\\Projects\\Calculator\\Calculator\\Calculator.csproj",
-      "packagesPath": "C:\\Users\\samoy\\.nuget\\packages\\",
-      "outputPath": "C:\\Data\\Projects\\Calculator\\Calculator\\obj\\",
->>>>>>> 240604ef2fdb536c8d4bcc03a08780708f34c695
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
