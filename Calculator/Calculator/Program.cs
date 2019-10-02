@@ -11,6 +11,8 @@ namespace Calculator
             Console.WriteLine("Введите выражение:");
             string expression = "";
 
+            Calculate calculate = new Calculate();
+
             List<double> numbers = new List<double> { };
             List<char> operations = new List<char> { };
 
@@ -36,7 +38,7 @@ namespace Calculator
                         break;
                     }
 
-                    if (expression[i] == '+' || expression[i] == '-' || expression[i] == '*' || expression[i] == '/' || expression[i] == ' ' || i == expression.Length - 1 && double.TryParse(numberString, out double y))
+                    if (expression[i] == '+' || expression[i] == '-' || expression[i] == '*' || expression[i] == '/' || i == expression.Length - 1 && double.TryParse(numberString, out double y))
                     {
                         if (numberString.Length == 0)
                         {
@@ -48,9 +50,11 @@ namespace Calculator
                         operations.Add(expression[i]);
 
                         if (i == expression.Length - 1 && byte.TryParse(expression[i].ToString(), out byte b))
+                        {
                             numberString += expression[i];
+                            decodingStatus = false;
+                        }
 
-                        //Console.WriteLine(numberString);    
                         numbers.Add(Convert.ToDouble(numberString));
                         numberString = string.Empty;
                     }
@@ -62,7 +66,6 @@ namespace Calculator
 
                     if (i == expression.Length - 1 && double.TryParse(numberString, out double a))
                     {
-                        //numberString += expression[i];
                         numbers.Add(Convert.ToDouble(numberString));
 
                         decodingStatus = false;
@@ -75,12 +78,12 @@ namespace Calculator
             {
                 if (o == '*')
                 {
-                    numbers[j + 1] = numbers[j] * numbers[j + 1];
+                    numbers[j + 1] = calculate.Multiplication(numbers[j], numbers[j + 1]);
                     numbers[j] = 0;
                 }
                 else if (o == '/')
                 {
-                    numbers[j + 1] = numbers[j] / numbers[j + 1];
+                    numbers[j + 1] = calculate.Division(numbers[j], numbers[j + 1]);
                     numbers[j] = 0;
                 }
                 else if (o == '-')
