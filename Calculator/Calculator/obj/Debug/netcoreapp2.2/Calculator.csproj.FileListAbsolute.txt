@@ -1,0 +1,9 @@
+C:\Users\User\Desktop\vasilyata\Calculator\Calculator\bin\Debug\netcoreapp2.2\Calculator.deps.json
+C:\Users\User\Desktop\vasilyata\Calculator\Calculator\bin\Debug\netcoreapp2.2\Calculator.runtimeconfig.json
+C:\Users\User\Desktop\vasilyata\Calculator\Calculator\bin\Debug\netcoreapp2.2\Calculator.runtimeconfig.dev.json
+C:\Users\User\Desktop\vasilyata\Calculator\Calculator\bin\Debug\netcoreapp2.2\Calculator.dll
+C:\Users\User\Desktop\vasilyata\Calculator\Calculator\bin\Debug\netcoreapp2.2\Calculator.pdb
+C:\Users\User\Desktop\vasilyata\Calculator\Calculator\obj\Debug\netcoreapp2.2\Calculator.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\vasilyata\Calculator\Calculator\obj\Debug\netcoreapp2.2\Calculator.AssemblyInfo.cs
+C:\Users\User\Desktop\vasilyata\Calculator\Calculator\obj\Debug\netcoreapp2.2\Calculator.dll
+C:\Users\User\Desktop\vasilyata\Calculator\Calculator\obj\Debug\netcoreapp2.2\Calculator.pdb

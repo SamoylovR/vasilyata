@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\Просто\Гыгы\Гыгы\obj\Debug\Гыгы.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Просто\Гыгы\Гыгы\obj\Debug\Гыгы.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Просто\Гыгы\Гыгы\bin\Debug\Гыгы.exe.config
+C:\Users\User\Desktop\Просто\Гыгы\Гыгы\bin\Debug\Гыгы.exe
+C:\Users\User\Desktop\Просто\Гыгы\Гыгы\bin\Debug\Гыгы.pdb
+C:\Users\User\Desktop\Просто\Гыгы\Гыгы\obj\Debug\Гыгы.exe
+C:\Users\User\Desktop\Просто\Гыгы\Гыгы\obj\Debug\Гыгы.pdb
