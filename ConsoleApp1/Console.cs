@@ -34,9 +34,9 @@ namespace ConsoleApp1
         {
 			for (int i = 0; i < log.Count; i++)
 			{
-				Console.ForegroundColor = log[log.Count - i].color;
+				//Console.ForegroundColor = log[log.Count - i].color;
 				Console.SetCursorPosition(col, rows - i);
-				Console.WriteLine(log[log.Count - i].msg.PadRight(Console.BufferWidth - col), ' ');
+				//Console.WriteLine(log[log.Count - i].msg.PadRight(Console.BufferWidth - col), ' ');
 			}
 		}
 
