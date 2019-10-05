@@ -23,6 +23,7 @@ namespace Calculator
                 expression = Console.ReadLine();
                 expression = expression.Replace(" ", string.Empty);
 
+
                 string numberString = "";
                 byte count = 0;
 
