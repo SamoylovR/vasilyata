@@ -74,7 +74,7 @@ namespace ConsoleApp2
 					while (true)
 					{
 						Console.Write("Введите сумму пополнения: ");
-						if (double.TryParse(Console.ReadLine(), out double x) && x >= 0)
+						if (double.TryParse(Console.ReadLine(), out double x) && x >= 0) 
 						{
 							money += x;
 							break;
