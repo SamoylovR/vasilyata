@@ -1,0 +1,11 @@
+C:\Data\Projects\vasilyata\Bank\Bank\obj\Debug\netcoreapp2.2\Bank.csprojAssemblyReference.cache
+C:\Data\Projects\vasilyata\Bank\Bank\obj\Debug\netcoreapp2.2\Bank.csproj.CoreCompileInputs.cache
+C:\Data\Projects\vasilyata\Bank\Bank\obj\Debug\netcoreapp2.2\Bank.AssemblyInfoInputs.cache
+C:\Data\Projects\vasilyata\Bank\Bank\obj\Debug\netcoreapp2.2\Bank.AssemblyInfo.cs
+C:\Data\Projects\vasilyata\Bank\Bank\bin\Debug\netcoreapp2.2\Bank.deps.json
+C:\Data\Projects\vasilyata\Bank\Bank\bin\Debug\netcoreapp2.2\Bank.runtimeconfig.json
+C:\Data\Projects\vasilyata\Bank\Bank\bin\Debug\netcoreapp2.2\Bank.runtimeconfig.dev.json
+C:\Data\Projects\vasilyata\Bank\Bank\bin\Debug\netcoreapp2.2\Bank.dll
+C:\Data\Projects\vasilyata\Bank\Bank\bin\Debug\netcoreapp2.2\Bank.pdb
+C:\Data\Projects\vasilyata\Bank\Bank\obj\Debug\netcoreapp2.2\Bank.dll
+C:\Data\Projects\vasilyata\Bank\Bank\obj\Debug\netcoreapp2.2\Bank.pdb
