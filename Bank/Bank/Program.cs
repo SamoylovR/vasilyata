@@ -78,9 +78,10 @@ namespace ConsoleApp2
                     while (true)
                     {
                         Console.Write("Введите сумму пополнения: ");
-                        if (double.TryParse(Console.ReadLine(), out double x) && x >= 0)
+                        string Addition = "";
+                        if (double.TryParse(Addition=Console.ReadLine(), out double x) && x >= 0)
                         {
-                            money += x;
+                            money=Calculator.Calculate.Addition(money,Convert.ToDouble(Addition));
                             break;
                         }
 
@@ -94,10 +95,10 @@ namespace ConsoleApp2
                     while (true)
                     {
                         Console.WriteLine("Введите сумму снятия: ");
-
-                        if (double.TryParse(Console.ReadLine(), out double x))
+                        string Subtraction = "";
+                        if (double.TryParse(Subtraction=Console.ReadLine(), out double x))
                         {
-                            money -= x;
+                            money=Calculator.Calculate.Subtraction(money, Convert.ToDouble(Subtraction));
                             break;
                         }
 
