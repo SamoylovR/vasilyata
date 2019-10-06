@@ -9,3 +9,13 @@ C:\Data\Projects\vasilyata\Bank\Bank\bin\Debug\netcoreapp2.2\Bank.dll
 C:\Data\Projects\vasilyata\Bank\Bank\bin\Debug\netcoreapp2.2\Bank.pdb
 C:\Data\Projects\vasilyata\Bank\Bank\obj\Debug\netcoreapp2.2\Bank.dll
 C:\Data\Projects\vasilyata\Bank\Bank\obj\Debug\netcoreapp2.2\Bank.pdb
+C:\Users\User\Desktop\vasilyata\Bank\Bank\bin\Debug\netcoreapp2.2\Bank.deps.json
+C:\Users\User\Desktop\vasilyata\Bank\Bank\bin\Debug\netcoreapp2.2\Bank.runtimeconfig.json
+C:\Users\User\Desktop\vasilyata\Bank\Bank\bin\Debug\netcoreapp2.2\Bank.runtimeconfig.dev.json
+C:\Users\User\Desktop\vasilyata\Bank\Bank\bin\Debug\netcoreapp2.2\Bank.dll
+C:\Users\User\Desktop\vasilyata\Bank\Bank\bin\Debug\netcoreapp2.2\Bank.pdb
+C:\Users\User\Desktop\vasilyata\Bank\Bank\obj\Debug\netcoreapp2.2\Bank.csprojAssemblyReference.cache
+C:\Users\User\Desktop\vasilyata\Bank\Bank\obj\Debug\netcoreapp2.2\Bank.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\vasilyata\Bank\Bank\obj\Debug\netcoreapp2.2\Bank.AssemblyInfo.cs
+C:\Users\User\Desktop\vasilyata\Bank\Bank\obj\Debug\netcoreapp2.2\Bank.dll
+C:\Users\User\Desktop\vasilyata\Bank\Bank\obj\Debug\netcoreapp2.2\Bank.pdb

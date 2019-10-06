@@ -133,6 +133,15 @@ namespace ConsoleApp2
                     {
                         Console.WriteLine("У вас не осталось средств,");
                     }
+                }else if (answer == "4")
+                {
+                    Console.WriteLine("Введите номер карты получателя:");
+                    string RecipientCardNumberST = Console.ReadLine();
+                    Console.WriteLine("Введите сумму, которую хотите перевести:");
+                    string TransferAmountST = Console.ReadLine();
+                    double TransferAmount = Convert.ToDouble(TransferAmountST);
+                    money -= TransferAmount;
+
                 }
             }
         }
