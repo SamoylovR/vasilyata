@@ -61,10 +61,10 @@ namespace ConsoleApp2
                 while (true)
                 {
                     Console.WriteLine("Текущий баланс:" + money.ToString("C3",
-                                                         CultureInfo.CreateSpecificCulture("be-BY")) + "\nЧтобы пополнить счет, введите 1. \nЧтобы снять деньги, введите 2 \nЧтобы завершить сеанс, введите 3.\n\n");
+                                                         CultureInfo.CreateSpecificCulture("be-BY")) + "\nЧтобы пополнить счет, введите 1. \nЧтобы снять деньги, введите 2 \nЧтобы завершить сеанс, введите 3.\nЧтобы перевести деньги на другую карту, введите 4.\nЧтобы сменить валюту счета, введите 5.\n");
 
                     answer = Console.ReadLine();
-                    if (answer == "1" || answer == "2" || answer == "3"||answer=="4")
+                    if (answer == "1" || answer == "2" || answer == "3"||answer=="4"|| answer == "5")
                     {
                         Console.Clear();
                         break;
@@ -166,6 +166,26 @@ namespace ConsoleApp2
                             Console.WriteLine("Введено некорректное значение, попробуйте снова.");
                     }
                     money = Calculator.Calculate.Subtraction(money, TransferAmount);
+
+                }else if (answer == "5")
+                { string ConvertationST = "";
+                    int Convertation;
+                    Console.WriteLine("Валюта вашего счета белорусские рубли, выбирайте, в какую валютy\nвы переведете ваши деньги. Комиссия на данную операцию 2%\nВведите 1 для перевода в доллары.\nВведите 2 для перевода в евро.");
+                    while (true)
+                    {
+                        if((int.TryParse(ConvertationST=Console.ReadLine(), out Convertation ))&&((ConvertationST=="1")||(ConvertationST=="2")))
+                        {
+                            break;
+                        }
+                        Console.WriteLine("Введено некорректное значение, попробуйте снова.");
+                    }
+                    if (ConvertationST =="1")
+                    {
+                        Calculator.Convertations.BYN_to_USD(ref money);
+                    }else if(ConvertationST == "2")
+                    {
+                        Calculator.Convertations.BYN_to_EURO(ref money);
+                    }
 
                 }
             }

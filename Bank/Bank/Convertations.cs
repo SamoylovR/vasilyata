@@ -8,33 +8,39 @@ namespace Calculator
     {
      public static void BYN_to_USD(ref double balance)
         {
-          balance=balance*0.46;
-            Console.WriteLine("Теперь валюта вашего счета Доллары. Остаток"+balance);
+          balance=balance*0.46*0.98;
+            double komission = balance * 0.02;
+            Console.WriteLine("Теперь валюта вашего счета Доллары. Остаток "+balance + " Коммисия за операцию:" + komission);
         }
         public static void BYN_to_EURO(ref double balance)
         {
-            balance = balance * 0.4;
-            Console.WriteLine("Теперь валюта вашего счета Евро. Остаток" + balance);
+            balance = balance * 0.4*0.98;
+            double komission = balance * 0.02;
+            Console.WriteLine("Теперь валюта вашего счета Евро. Остаток " + balance + " Коммисия за операцию:" + komission);
         }
         public static void USD_to_BYN(ref double balance)
         {
-            balance = balance * 2.2;
-            Console.WriteLine("Теперь валюта вашего счета Белоруские рубли. Остаток" + balance);
+            balance = balance * 2.2 * 0.98;
+            double komission = balance * 0.02;
+            Console.WriteLine("Теперь валюта вашего счета Белоруские рубли. Остаток " + balance + " Коммисия за операцию:" + komission);
         }
         public static void USD_to_EURO(ref double balance)
         {
-            balance = balance * 0.88;
-            Console.WriteLine("Теперь валюта вашего счета Евро. Остаток" + balance);
+            balance = balance * 0.88 * 0.98;
+            double komission = balance * 0.02;
+            Console.WriteLine("Теперь валюта вашего счета Евро. Остаток " + balance + " Коммисия за операцию:" + komission);
         }
         public static void EURO_to_USD(ref double balance)
         {
-            balance =balance* 1.14;
-            Console.WriteLine("Теперь валюта вашего счета Доллары. Остаток" + balance);
+            balance =balance* 1.14 * 0.98;
+            double komission = balance * 0.02;
+            Console.WriteLine("Теперь валюта вашего счета Доллары. Остаток " + balance+" Коммисия за операцию:" + komission);
         }
         public static void EURO_to_BYN(ref double balance)
         {
-            balance = balance * 2.5;
-            Console.WriteLine("Теперь валюта вашего счета  Белоруские рубли. Остаток" + balance);
+            balance = balance * 2.5 * 0.98;
+            double komission = balance * 0.02;
+            Console.WriteLine("Теперь валюта вашего счета  Белоруские рубли. Остаток " + balance+" Коммисия за операцию:"+komission);
         }
         
     }
