@@ -64,7 +64,7 @@ namespace ConsoleApp2
                                                          CultureInfo.CreateSpecificCulture("be-BY")) + "\nЧтобы пополнить счет, введите 1. \nЧтобы снять деньги, введите 2 \nЧтобы завершить сеанс, введите 3.\n\n");
 
                     answer = Console.ReadLine();
-                    if (answer == "1" || answer == "2" || answer == "3")
+                    if (answer == "1" || answer == "2" || answer == "3"||answer=="4")
                     {
                         Console.Clear();
                         break;
@@ -136,11 +136,35 @@ namespace ConsoleApp2
                 }else if (answer == "4")
                 {
                     Console.WriteLine("Введите номер карты получателя:");
-                    string RecipientCardNumberST = Console.ReadLine();
+                    string RecipientCardNumberST = "";
+                    long RecipientCardNumber;
+                    string TransferAmountST = "";
+                    double TransferAmount;
+                    while (true)
+                    {
+                        if ((long.TryParse(RecipientCardNumberST = Console.ReadLine(), out RecipientCardNumber)) && (RecipientCardNumberST.Length == 16))
+                        {
+                            break;
+                        }
+                            Console.WriteLine("Введено некорректное значение, попробуйте снова.");
+                    }
                     Console.WriteLine("Введите сумму, которую хотите перевести:");
-                    string TransferAmountST = Console.ReadLine();
-                    double TransferAmount = Convert.ToDouble(TransferAmountST);
-                    money -= TransferAmount;
+                    while (true)
+                    {
+                        if (double.TryParse(TransferAmountST = Console.ReadLine(), out TransferAmount))
+                        {
+                            TransferAmount = Convert.ToDouble(TransferAmountST);
+                            if (money < TransferAmount)
+                            {
+                                Console.WriteLine("Недостаточно средств на счету, введите другое значение");
+                            }
+                            else
+                                break;
+                        }
+                        else
+                            Console.WriteLine("Введено некорректное значение, попробуйте снова.");
+                    }
+                    money = Calculator.Calculate.Subtraction(money, TransferAmount);
 
                 }
             }
