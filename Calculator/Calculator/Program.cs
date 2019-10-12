@@ -8,99 +8,40 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите выражение:");
-            string expression = "";
+            ReversePolishNotation rpn = new ReversePolishNotation();
 
-            Calculate calculate = new Calculate();
-
-            List<double> numbers = new List<double> { };
-            List<char> operations = new List<char> { };
-
-            bool decodingStatus = true;
-
-            while (decodingStatus)
+            while (true)
             {
-                expression = Console.ReadLine();
-                expression = expression.Replace(" ", string.Empty);
+                Console.WriteLine("Введите выражение:");
+                Console.WriteLine("Введите Выход/Exit, чтобы закончить операцию");
 
+                string expression = "";
+                bool exitStatus = false;
 
-                string numberString = "";
-                byte count = 0;
-
-                for (int i = 0; i < expression.Length; i++)
+                while (true)
                 {
-                    if (expression[i] == ',' || expression[i] == '.')
-                        count++;
+                    expression = Console.ReadLine();
+                    expression = expression.ToLower();
+                    expression = expression.Replace(" ", string.Empty);
 
-                    if ((!byte.TryParse(expression[i].ToString(), out byte x) && count == 2) || !byte.TryParse(expression[expression.Length - 1].ToString(), out byte c))
+                    if (expression == "выход" || expression == "exit" || expression == "ds[jl" || expression == "учше")
                     {
-                        Console.WriteLine("Введите корректное выражение");
-                        numbers.Clear();
+                        exitStatus = true;
                         break;
                     }
 
-                    if (expression[i] == '+' || expression[i] == '-' || expression[i] == '*' || expression[i] == '/' || i == expression.Length - 1 && double.TryParse(numberString, out double y))
-                    {
-                        if (numberString.Length == 0)
-                        {
-                            Console.WriteLine("Ведите корректное значение");
-                            numbers.Clear();
-                            break;
-                        }
+                    if (rpn.StringToRPN(expression) != "Decoding error, let's try again")
+                        break;
 
-                        operations.Add(expression[i]);
-
-                        if (i == expression.Length - 1 && byte.TryParse(expression[i].ToString(), out byte b))
-                        {
-                            numberString += expression[i];
-                            decodingStatus = false;
-                        }
-
-                        numbers.Add(Convert.ToDouble(numberString));
-                        numberString = string.Empty;
-                    }
-                    else
-                    {
-                        numberString += expression[i];
-                        numberString = numberString.Replace('.', ',');
-                    }
-
-                    if (i == expression.Length - 1 && double.TryParse(numberString, out double a))
-                    {
-                        numbers.Add(Convert.ToDouble(numberString));
-
-                        decodingStatus = false;
-                    }
-                }
-            }
-            int j = 0;
-
-            foreach (char o in operations)
-            {
-                if (o == '*')
-                {
-                    numbers[j + 1] = calculate.Multiplication(numbers[j], numbers[j + 1]);
-                    numbers[j] = 0;
-                }
-                else if (o == '/')
-                {
-                    numbers[j + 1] = calculate.Division(numbers[j], numbers[j + 1]);
-                    numbers[j] = 0;
-                }
-                else if (o == '-')
-                {
-                    numbers[j + 1] = -numbers[j + 1];
+                    Console.WriteLine("Try to enter expression correctly again");
                 }
 
-                j++;
-            }
+                if (exitStatus)
+                    break;
 
-            double sum = 0;
-
-            foreach (double n in numbers)
-                sum += n;
-
-            Console.WriteLine($"Результат: {sum}");
+                Console.WriteLine(rpn.StringToRPN(expression));
+                Console.WriteLine(rpn.RPNToAnswer(rpn.StringToRPN(expression)));
+            }   
         }
     }
 }
