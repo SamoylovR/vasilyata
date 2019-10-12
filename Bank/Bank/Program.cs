@@ -165,15 +165,15 @@ namespace ConsoleApp2
                         }
                             Console.WriteLine("Введено некорректное значение, попробуйте снова.");
                     }
-                    Console.WriteLine("Введите сумму, которую хотите перевести:");
+                    Console.WriteLine("Введите сумму, которую хотите перевести, комиссия за данную операцию составляет 1% от суммы перевода :");
                     while (true)
                     {
                         if (double.TryParse(TransferAmountST = Console.ReadLine(), out TransferAmount))
                         {
                             TransferAmount = Convert.ToDouble(TransferAmountST);
-                            if (money < TransferAmount)
+                            if (money < TransferAmount*TransferAmount*0.01)
                             {
-                                Console.WriteLine("Недостаточно средств на счету, введите другое значение");
+                                Console.WriteLine("Недостаточно средств на счету ,либо для перевода, либо для оплаты комиссии, введите другое значение");
                             }
                             else
                                 break;
@@ -181,7 +181,7 @@ namespace ConsoleApp2
                         else
                             Console.WriteLine("Введено некорректное значение, попробуйте снова.");
                     }
-                    money = Calculator.Calculate.Subtraction(money, TransferAmount);
+                    money = Calculator.Calculate.Subtraction(Calculator.Calculate.Subtraction(money, TransferAmount),TransferAmount*0.01);
 
                 }else if (answer == "5")
                 { string ConvertationST = "";
