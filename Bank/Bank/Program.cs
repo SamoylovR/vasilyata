@@ -173,7 +173,7 @@ namespace ConsoleApp2
                             TransferAmount = Convert.ToDouble(TransferAmountST);
                             if (money < TransferAmount*TransferAmount*0.01)
                             {
-                                Console.WriteLine("Недостаточно средств на счету ,либо для перевода, либо для оплаты комиссии, введите другое значение");
+                                Console.WriteLine("Недостаточно средств на счету ,либо для перевода, либо для оплаты комиссии,\n введите другое значение");
                             }
                             else
                                 break;
