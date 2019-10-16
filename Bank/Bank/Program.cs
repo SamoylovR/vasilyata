@@ -11,21 +11,17 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите логин и пароль для регистрации");
-           var (Login,Password)= Logining.Registration.registration(Console.ReadLine(), Console.ReadLine()) ;
+            Console.WriteLine("Для регистрации введите логин и пароль:");
+            User DefaultUser = new User();
+
+            Console.Clear();
+            Console.WriteLine("Введите свой логин и пароль заново:");
+
             while (true)
             {
-                if (Logining.Login.login(Login, Password, Console.ReadLine(), Console.ReadLine()) == 1)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Введенные вами данные были одобрены, вход в систему...\n");
+                if (DefaultUser.Entering() == true)
+
                     break;
-                }
-                else
-                {
-                    Console.Clear();
-                    Console.WriteLine("Неверные логин или пароль");
-                }
             }
             double money = 0;
             while (true)
