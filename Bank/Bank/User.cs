@@ -17,8 +17,8 @@ namespace ConsoleApp2
             Password = Console.ReadLine();
 
             Console.WriteLine("Регистрация прошла успешно");
-            /*if (Login == "admin" && Password == "admin")
-                OwnersAccount.WorkWithOwner();*/
+            if (Login == "admin" && Password == "admin")
+                OwnersAccount.WorkWithOwner();
 
         }
         public bool Entering()
