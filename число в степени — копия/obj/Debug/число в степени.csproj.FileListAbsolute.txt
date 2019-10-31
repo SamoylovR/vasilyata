@@ -1,0 +1,7 @@
+C:\Users\stas1\OneDrive\Рабочий стол\число в степени\bin\Debug\число в степени.exe.config
+C:\Users\stas1\OneDrive\Рабочий стол\число в степени\bin\Debug\число в степени.exe
+C:\Users\stas1\OneDrive\Рабочий стол\число в степени\bin\Debug\число в степени.pdb
+C:\Users\stas1\OneDrive\Рабочий стол\число в степени\obj\Debug\число в степени.csprojAssemblyReference.cache
+C:\Users\stas1\OneDrive\Рабочий стол\число в степени\obj\Debug\число в степени.csproj.CoreCompileInputs.cache
+C:\Users\stas1\OneDrive\Рабочий стол\число в степени\obj\Debug\число в степени.exe
+C:\Users\stas1\OneDrive\Рабочий стол\число в степени\obj\Debug\число в степени.pdb
