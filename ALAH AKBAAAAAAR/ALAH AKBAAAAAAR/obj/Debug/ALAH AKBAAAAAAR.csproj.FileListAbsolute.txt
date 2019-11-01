@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\Все с уником связанное\Прога\ALAH AKBAAAAAAR\ALAH AKBAAAAAAR\bin\Debug\ALAH AKBAAAAAAR.exe.config
+C:\Users\User\Desktop\Все с уником связанное\Прога\ALAH AKBAAAAAAR\ALAH AKBAAAAAAR\bin\Debug\ALAH AKBAAAAAAR.exe
+C:\Users\User\Desktop\Все с уником связанное\Прога\ALAH AKBAAAAAAR\ALAH AKBAAAAAAR\bin\Debug\ALAH AKBAAAAAAR.pdb
+C:\Users\User\Desktop\Все с уником связанное\Прога\ALAH AKBAAAAAAR\ALAH AKBAAAAAAR\obj\Debug\ALAH AKBAAAAAAR.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Все с уником связанное\Прога\ALAH AKBAAAAAAR\ALAH AKBAAAAAAR\obj\Debug\ALAH AKBAAAAAAR.exe
+C:\Users\User\Desktop\Все с уником связанное\Прога\ALAH AKBAAAAAAR\ALAH AKBAAAAAAR\obj\Debug\ALAH AKBAAAAAAR.pdb
