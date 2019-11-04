@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\vasilyata\Large Number\Large Number\bin\Debug\Large Number.exe.config
+C:\Users\User\Desktop\vasilyata\Large Number\Large Number\bin\Debug\Large Number.exe
+C:\Users\User\Desktop\vasilyata\Large Number\Large Number\bin\Debug\Large Number.pdb
+C:\Users\User\Desktop\vasilyata\Large Number\Large Number\obj\Debug\Large Number.csprojAssemblyReference.cache
+C:\Users\User\Desktop\vasilyata\Large Number\Large Number\obj\Debug\Large Number.exe
+C:\Users\User\Desktop\vasilyata\Large Number\Large Number\obj\Debug\Large Number.pdb
