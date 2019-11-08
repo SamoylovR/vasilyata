@@ -2,98 +2,129 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Large_Number
+namespace hui
 {
     class Program
     {
         static void Main(string[] args)
         {
-            String Number = Console.ReadLine();
-            int Degree = Convert.ToInt32(Console.ReadLine());  
+            string Number = Console.ReadLine();
+            int Multiply = Convert.ToInt32(Console.ReadLine());
             string[] UsingNumber = new string[Number.Length];
             string[] AddingNumber = new string[Number.Length];
             for (int i = 0; i <= Number.Length - 1; i++)
             {
-              UsingNumber[i] = Convert.ToString(Number[i]);
-              AddingNumber[i] = Convert.ToString( Number[i]);
+                UsingNumber[i] = Convert.ToString(Number[i]);
+                AddingNumber[i] = Convert.ToString(Number[i]);
             }
-            //for (int k = 2; k <=Degree; k++)
-        //  {
-                for (int j = 1; j < Convert.ToInt32(Number); j++)
+            while (UsingNumber.Length % 5 != 0 && AddingNumber.Length % 5 != 0)
+            {
+                string[] Help = new string[AddingNumber.Length + 1];
+                Help[0] = "0";
+                for (int i = 0; i <= AddingNumber.Length - 1; i++)
                 {
-                string[] Helper2 = new string[AddingNumber.Length+1];
-                string[] Helper1 = new string[UsingNumber.Length + 1];
-                Helper1[0] = "0";
-                Helper2[0] = "0";
-                for(int n = 1; n <= AddingNumber.Length; n++)
-                {
-                    Helper2[n] = Convert.ToString(AddingNumber[n-1]);
-                   // Console.WriteLine("Helpers2 n" + n + " " + Helper2[n]);
+                    Help[i + 1] = AddingNumber[i];
                 }
-                for (int n=1;n<=UsingNumber.Length;n++)
+                AddingNumber = Help;
+                UsingNumber = Help;
+            }
+            string[] UsingNumber1 = new string[UsingNumber.Length / 5];
+            string[] AddingNumber1 = new string[AddingNumber.Length / 5];
+            int add = 0;
+            for (int i = 0; i <= AddingNumber1.Length - 1; i++)
+            {
+                for (int j = 0; j <= 4; j++)
                 {
-                    Helper1[n] = Convert.ToString(UsingNumber[n - 1]);
-                   // Console.WriteLine("Helpers1 n"+n+" "+Helper1[n]);
+                    UsingNumber1[i] += UsingNumber[j + add];
+                    AddingNumber1[i] += AddingNumber[j + add];
                 }
-                AddingNumber = Helper2;
-                UsingNumber = Helper1;
-                    for (int i = UsingNumber.Length - 1; i >= 0; i--)
+                add += 5;
+            }
+            for (int f = 2; f <= Multiply; f++)
+            {
+                for (int i = AddingNumber1.Length - 1; i >= 0; i--)
+                {
+                    try
                     {
-                    if (Convert.ToInt32(UsingNumber[i]) + Convert.ToInt32(AddingNumber[i])>=10)
+
+                        if (Convert.ToInt32(UsingNumber1[i]) + Convert.ToInt32(AddingNumber1[i]) >= 100000)
+                        {
+                            UsingNumber1[i] = Convert.ToString(Convert.ToInt32(UsingNumber1[i]) + Convert.ToInt32(AddingNumber1[i]) - 100000);
+                            UsingNumber1[i - 1] = Convert.ToString(Convert.ToInt32(UsingNumber1[i - 1]) + 1);
+                        }
+                        else
+                            UsingNumber1[i] = Convert.ToString(Convert.ToInt32(UsingNumber1[i]) + Convert.ToInt32(AddingNumber1[i]));
+
+                    }
+                    catch (IndexOutOfRangeException)
                     {
-                        UsingNumber[i] = Convert.ToString(Convert.ToInt32(UsingNumber[i]) + Convert.ToInt32(AddingNumber[i])-10);
-                        UsingNumber[i - 1] = Convert.ToString(Convert.ToInt32(UsingNumber[i - 1])+1);
-                    }else 
-                        UsingNumber[i] = Convert.ToString(Convert.ToInt32(UsingNumber[i]) + Convert.ToInt32(AddingNumber[i]));
-                   
+                        string[] Help1 = new string[AddingNumber1.Length + 1];
+                        string[] Help2 = new string[UsingNumber1.Length + 1];
+                        Help1[0] = "0";
+                        Help2[0] = "0";
+                        for (int n = 0; n <= AddingNumber1.Length - 1; i++)
+                        {
+                            Help1[n + 1] = AddingNumber1[n];
+                            Help2[n + 1] = UsingNumber1[n];
+                        }
+                        AddingNumber1 = Help1;
+                        UsingNumber1 = Help2;
+                        AddingNumber1[0] = "1";
+                        UsingNumber1[0] = "1";
                     }
                 }
-          //  }
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            for (int i=0;i<= Number.Length - 1; i++)
-            {
-               Console.WriteLine(AddingNumber[i]);
-         
-            }
-            Console.WriteLine("Итог");
-            for (int i = 0; i <= UsingNumber.Length - 1; i++)
-            {
-               
-                Console.Write(UsingNumber[i]);
             }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                Console.WriteLine("\n");
+                Console.WriteLine("ITOG");
+                for (int i = 0; i <= UsingNumber1.Length - 1; i++)
+                {
+                    Console.Write(UsingNumber1[i]);
+                }
+            
         }
     }
 }
