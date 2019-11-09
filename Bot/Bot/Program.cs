@@ -114,6 +114,21 @@ namespace Bot
 
                 );
             }
+
+            else if (e.Message.Text.Contains("кто тебя создал") == true|| e.Message.Text.Contains("кто твой создатель") == true)
+            {
+                Console.WriteLine($"Received a text message in chat {e.Message.Chat.Id}. Text: {e.Message.Text}");
+                await botClient.SendTextMessageAsync(
+                  chatId: e.Message.Chat,
+                  text: "Есть там 1 молодой человек. Егор Сергеевич, классный челик :D"
+
+                );
+                Message message = await botClient.SendPhotoAsync(
+                  chatId: e.Message.Chat,
+                  photo: "https://sun9-2.userapi.com/c851536/v851536936/1d80f2/7xlmO3qCZLk.jpg"
+
+                );
+            }
             else if (e.Message.Text.Contains("влад") == true&&e.Message.Text.Contains("хмель")==true)
             {
                 Console.WriteLine($"Received a text message in chat {e.Message.Chat.Id}. Text: {e.Message.Text}");
@@ -123,7 +138,16 @@ namespace Bot
 
                 );
             }
-            else 
+            else if (e.Message.Text.Contains("пир") == true && e.Message.Text.Contains("кто") == true)
+            {
+                Console.WriteLine($"Received a text message in chat {e.Message.Chat.Id}. Text: {e.Message.Text}");
+                await botClient.SendTextMessageAsync(
+                  chatId: e.Message.Chat,
+                  text: WhoAmI.WhoFromPIR()
+
+                ) ;
+            }
+            else
             if (e.Message.Text.Contains("булка") == true)
             {
                 Console.WriteLine($"Received a text message in chat {e.Message.Chat.Id}. Text: {e.Message.Text}");

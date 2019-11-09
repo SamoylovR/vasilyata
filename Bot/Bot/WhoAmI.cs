@@ -47,7 +47,44 @@ namespace Bot
             return (string)list[b];
         }
 
+        public static string WhoFromPIR()
+        {
+            ArrayList FaggotsFromPIR = new ArrayList();
 
+            FaggotsFromPIR.Add("Алейников Влад");
+            FaggotsFromPIR.Add("Аль-джарах Илья");
+            FaggotsFromPIR.Add("Шараковский Костя");
+            FaggotsFromPIR.Add("Свириденко Стасян");
+            FaggotsFromPIR.Add("Короткевич Настя");
+            FaggotsFromPIR.Add("Самойлов Рома");
+            FaggotsFromPIR.Add("Хмельницкий Владюша");
+            FaggotsFromPIR.Add("Притула Егор");
+            FaggotsFromPIR.Add("Подлужный Владик");
+            FaggotsFromPIR.Add("Перетра.... Перетрухин Никита ");
+            FaggotsFromPIR.Add("Чеховский Володя");
+            FaggotsFromPIR.Add("Думчева Лиза");
+            FaggotsFromPIR.Add("Банчиков Артем");
+            FaggotsFromPIR.Add("Пивоварчик Артем");
+            FaggotsFromPIR.Add("Белов Стат");
+            FaggotsFromPIR.Add("Степанов шре... Шон");
+            FaggotsFromPIR.Add("Павлов федя");
+            FaggotsFromPIR.Add("Полина Иванова");
+            FaggotsFromPIR.Add("Добровольский Кирилл");
+            FaggotsFromPIR.Add("Павловский Макс");
+            FaggotsFromPIR.Add("Казак Владислав");
+            FaggotsFromPIR.Add("Журавский Саня");
+            FaggotsFromPIR.Add("Дораш Стас");
+            FaggotsFromPIR.Add("Скоробогатый Рома");
+            FaggotsFromPIR.Add("Лёха Шкуратов");
+            FaggotsFromPIR.Add("Владислав Леванков (Бтв мать жива?)");
+            FaggotsFromPIR.Add("Матьянов Андрюша");
+            FaggotsFromPIR.Add("Горевая Диана");
+            FaggotsFromPIR.Add("Коля Черленок");
+            FaggotsFromPIR.Add("Та которая не ходит, хз ка ее зовут :D");
+            Random a = new Random();
+            int b = a.Next(0, 29);
+            return (string)FaggotsFromPIR[b];
+        }
 
     }
 }
