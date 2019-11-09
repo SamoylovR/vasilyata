@@ -3,34 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace hui
+namespace Large_Number
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string Number = Console.ReadLine();
-            int Multiply = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите ваше число, оно долно удовлетворять следующим условиям:\n1.Целое\n2.Не отрицательное\n(Да Артем, я видел как ты издевался над прогой Стаса, не надо так :D)");
+            
+            string Number = Transformation.Cheking();
+
+            Console.Clear();
+
+            Console.WriteLine(Number);
+            Console.WriteLine("введите число на которое вы хотите умножить ваше, оно должно удовлетворять следующим условиям:\n1.Не отрицательное\n2.Целое");
+
+            double Multiply = Convert.ToDouble(Transformation.Cheking());
+            
             string[] UsingNumber = new string[Number.Length];
             string[] AddingNumber = new string[Number.Length];
-            for (int i = 0; i <= Number.Length - 1; i++)
-            {
-                UsingNumber[i] = Convert.ToString(Number[i]);
-                AddingNumber[i] = Convert.ToString(Number[i]);
-            }
-            while (UsingNumber.Length % 5 != 0 && AddingNumber.Length % 5 != 0)
-            {
-                string[] Help = new string[AddingNumber.Length + 1];
-                Help[0] = "0";
-                for (int i = 0; i <= AddingNumber.Length - 1; i++)
-                {
-                    Help[i + 1] = AddingNumber[i];
-                }
-                AddingNumber = Help;
-                UsingNumber = Help;
-            }
+
+            Transformation.Adjustment(Number, ref UsingNumber, ref AddingNumber, 5);
+           
             string[] UsingNumber1 = new string[UsingNumber.Length / 5];
             string[] AddingNumber1 = new string[AddingNumber.Length / 5];
+            
             int add = 0;
             for (int i = 0; i <= AddingNumber1.Length - 1; i++)
             {
@@ -59,67 +56,14 @@ namespace hui
                     }
                     catch (IndexOutOfRangeException)
                     {
-                        string[] Help1 = new string[AddingNumber1.Length + 1];
-                        string[] Help2 = new string[UsingNumber1.Length + 1];
-                        Help1[0] = "0";
-                        Help2[0] = "0";
-                        for (int n = 0; n <= AddingNumber1.Length - 1; i++)
-                        {
-                            Help1[n + 1] = AddingNumber1[n];
-                            Help2[n + 1] = UsingNumber1[n];
-                        }
-                        AddingNumber1 = Help1;
-                        UsingNumber1 = Help2;
-                        AddingNumber1[0] = "1";
+                        Transformation.Adding(ref UsingNumber1, ref AddingNumber1);
+                        AddingNumber1[0] = "0";
                         UsingNumber1[0] = "1";
                     }
                 }
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 Console.WriteLine("\n");
-                Console.WriteLine("ITOG");
+                Console.Write($"Полученное число равно:\n{Number}*{Multiply}=");
                 for (int i = 0; i <= UsingNumber1.Length - 1; i++)
                 {
                     Console.Write(UsingNumber1[i]);
