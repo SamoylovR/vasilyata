@@ -1,0 +1,11 @@
+C:\Users\User\Desktop\vasilyata\Bot\Bot\bin\Debug\Bot.exe.config
+C:\Users\User\Desktop\vasilyata\Bot\Bot\bin\Debug\Bot.exe
+C:\Users\User\Desktop\vasilyata\Bot\Bot\bin\Debug\Bot.pdb
+C:\Users\User\Desktop\vasilyata\Bot\Bot\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\Desktop\vasilyata\Bot\Bot\bin\Debug\Telegram.Bot.dll
+C:\Users\User\Desktop\vasilyata\Bot\Bot\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\Desktop\vasilyata\Bot\Bot\bin\Debug\Telegram.Bot.xml
+C:\Users\User\Desktop\vasilyata\Bot\Bot\obj\Debug\Bot.csprojAssemblyReference.cache
+C:\Users\User\Desktop\vasilyata\Bot\Bot\obj\Debug\Bot.csproj.CopyComplete
+C:\Users\User\Desktop\vasilyata\Bot\Bot\obj\Debug\Bot.exe
+C:\Users\User\Desktop\vasilyata\Bot\Bot\obj\Debug\Bot.pdb
