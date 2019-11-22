@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\Все с уником связанное\Курсы по проге\company\company\bin\Debug\company.exe.config
+C:\Users\User\Desktop\Все с уником связанное\Курсы по проге\company\company\bin\Debug\company.exe
+C:\Users\User\Desktop\Все с уником связанное\Курсы по проге\company\company\bin\Debug\company.pdb
+C:\Users\User\Desktop\Все с уником связанное\Курсы по проге\company\company\obj\Debug\company.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Все с уником связанное\Курсы по проге\company\company\obj\Debug\company.exe
+C:\Users\User\Desktop\Все с уником связанное\Курсы по проге\company\company\obj\Debug\company.pdb
