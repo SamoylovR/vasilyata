@@ -1,0 +1,5 @@
+C:\Users\stas1\OneDrive\Рабочий стол\программа начисления зп\bin\Debug\программа начисления зп.exe.config
+C:\Users\stas1\OneDrive\Рабочий стол\программа начисления зп\bin\Debug\программа начисления зп.exe
+C:\Users\stas1\OneDrive\Рабочий стол\программа начисления зп\bin\Debug\программа начисления зп.pdb
+C:\Users\stas1\OneDrive\Рабочий стол\программа начисления зп\obj\Debug\программа начисления зп.exe
+C:\Users\stas1\OneDrive\Рабочий стол\программа начисления зп\obj\Debug\программа начисления зп.pdb
