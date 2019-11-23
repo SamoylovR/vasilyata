@@ -231,6 +231,7 @@ namespace company
                         Console.Clear();
                     }
                 }
+                Console.Clear();
                 day();
                 Console.WriteLine("Another day, another life. I feel smell of money in my purse\n" +
                     "Press any button...");
