@@ -30,7 +30,7 @@ namespace company
             double salary = hours * moneyPerHour;
 
             money -= salary;
-            Console.WriteLine("money after salary"+ money);// only for testing
+            //Console.WriteLine("money after salary"+ money);// only for testing
             
             return salary;
         }

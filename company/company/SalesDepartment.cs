@@ -8,7 +8,21 @@ namespace company
 {
     class SalesDepartment
     {
-       private static int Warehouse; // The name tells everything)
+        private static int SoldProduction;
+        
+        public int soldProduction
+        {
+            get
+            {
+                return SoldProduction;
+            }
+            set
+            {
+                SoldProduction = value;
+            }
+        }
+
+        private static int Warehouse; // The name tells everything)
         public int warehouse
         {
             get
@@ -18,17 +32,25 @@ namespace company
             set
             {
                 Warehouse += value;
-                Console.WriteLine("WH " + Warehouse);//only for testing
+                //Console.WriteLine("WH " + Warehouse);//only for testing
             }
 
         }
-        //method which 
-        public void TryToSaleProduct()
+        //method which count a number of sold production
+        public void TryToSaleProduction()
         {
             FinancialDepartment receivedMoney = new FinancialDepartment();
+
             Random sale = new Random();
-            receivedMoney.Money= sale.Next(0, Warehouse)*20;
-            Console.WriteLine("money after sale "+ receivedMoney.Money);
+
+            SoldProduction = sale.Next(0, Warehouse);
+
+            Warehouse -= SoldProduction;
+
+            receivedMoney.Money= SoldProduction*30;
+
+           // Console.WriteLine("money after sale "+ receivedMoney.Money);
+
         }
         }
     }
