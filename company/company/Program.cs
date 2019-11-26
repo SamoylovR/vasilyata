@@ -21,7 +21,7 @@ namespace company
                     "This app can help you to be in charge of your own company\n" +
                     "Every company needs employees\n" +
                     "Enter the number of employees");
-            Employees emp = new Employees(Convert.ToInt32(Console.ReadLine()));
+            Employees emp = new Employees(ChekingForRightness.ChekingNumbers());
 
             Console.Clear();
 
@@ -163,8 +163,8 @@ namespace company
                         {
                             Console.Clear();
                             Console.WriteLine("1.List of employees\n" +
-                                "2.Fire an employee(the function is under revision)\n" +
-                                "3.Add an employee(the function is under revision)\n" +
+                                "2.Fire an employee\n" +
+                                "3.Add an employee\n" +
                                 "4.Back to the main menue");
                             keyPress = Console.ReadKey();
                             if (keyPress.KeyChar == '1')
@@ -172,6 +172,24 @@ namespace company
                                 emp.DisplayLIstOfEmployees();
                                 Console.WriteLine("Press any button...");
                                 Console.ReadKey();
+                            }else if (keyPress.KeyChar=='2')
+                            {
+                                emp.DisplayLIstOfEmployees();
+                                emp.FireEmployee();
+
+                                Console.WriteLine("Press any button...");
+                                Console.ReadKey();
+
+                            }else if (keyPress.KeyChar=='3')
+                            {
+                                Console.Clear();
+
+                                emp.AddNewEmployee();
+
+                                Console.WriteLine("Well. New employee was added to your company.\n" +
+                                    "Press any button...");
+                                Console.ReadKey();
+                                Console.Clear();
                             }
                             else if (keyPress.KeyChar == '4')
                             {

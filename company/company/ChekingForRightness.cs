@@ -111,9 +111,11 @@ namespace company
                     Console.WriteLine("You entered an incorrect value, try again ");
                 }else if (Convert.ToDouble(salary) > dep)
                 {
+                    Console.Clear();
                     Console.WriteLine($"This worker from {department} department. His maximum salary may not be more than {dep}");
                 }else if (Convert.ToDouble(salary) <= 0)
                 {
+                    Console.Clear();
                     Console.WriteLine("Hey. Every worker must receive a salary. ");
                 }
                 else
@@ -123,6 +125,48 @@ namespace company
             }
             return Convert.ToDouble(salary);
             
+        }
+        public static int ChekingNumbers()
+        {
+            string number;
+            while (true)
+            {
+                number = Console.ReadLine();
+
+                if(!int.TryParse(number, out int x))
+                {
+                    Console.Clear();
+
+                    Console.WriteLine("You entered an incorrect value, try again ");
+                }
+                else
+                {
+                    break;
+                }
+               
+            }
+            return Convert.ToInt32(number);
+        }
+        public static int ChekingNumbers(int barrier)
+        {
+            string number;
+            while (true)
+            {
+                number = Console.ReadLine();
+
+                if (!int.TryParse(number, out int x)||Convert.ToInt32(number)>barrier)
+                {
+                    Console.Clear();
+
+                    Console.WriteLine("You entered an incorrect value, try again ");
+                }
+                else
+                {
+                    break;
+                }
+
+            }
+            return Convert.ToInt32(number);
         }
     }
 }

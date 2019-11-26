@@ -18,7 +18,7 @@ namespace company
     class Employees
     {
         public int employeeCount { get; set; } //number of employees
-        Employee[] worker { get; }
+        Employee[] worker { get; set; }
         public Employees(int employeeCount)
         {
             this.employeeCount = employeeCount;
@@ -114,11 +114,7 @@ namespace company
                 //Console.WriteLine($"Worker {worker[i].Name} from {worker[i].Department} department got {worker[i].salary}");// only for testing
             }
         }
-        public void SetEmployeeCount(int number)
-        {
-            employeeCount = number;
 
-        }
         public void DisplayADayReport()
         {
             ProductionDepartment prodRep = new ProductionDepartment();
@@ -173,6 +169,82 @@ namespace company
             {
                 Console.WriteLine("Every worker came to work");
             }
+        }
+        public void AddNewEmployee()
+        {
+
+            employeeCount += 1;
+
+            Employee[] adding;
+           
+            adding = new Employee[employeeCount];
+
+            for (int i = 0; i<employeeCount-1;i++)
+            {
+                adding[i] = worker[i];
+            }
+            worker = adding;
+
+            Console.Clear();
+
+            Employees employee = new Employees(1);
+
+            Console.WriteLine("Enter a name of new worker");
+
+                string name = ChekingForRightness.ChekingName();
+
+                Console.Clear();
+
+                Console.WriteLine("Workers department\nSales\nFinancial\nProduction\nPersonnel");
+
+                string department =ChekingForRightness.ChekingDepartment ();
+
+                Console.Clear();
+
+                Console.WriteLine("Enter workers age");
+
+                int age = ChekingForRightness.ChekingAge();
+
+                Console.Clear();
+
+                Console.WriteLine("Enter workers salary per hour");
+
+                double salaryPerHour = ChekingForRightness.ChekingSalary(department);
+
+                employee[0] = new Employee { Name = name, Department = department, Age = age, SalaryPerHour = salaryPerHour, workingHours=0, salary=0 };
+
+                worker[employeeCount - 1] = employee[0];
+           
+            Console.Clear();
+
+        }
+        public void FireEmployee()
+        {
+            Console.WriteLine("Enter the number of the employee you want to fire ");
+
+            int num = ChekingForRightness.ChekingNumbers(employeeCount);
+
+            employeeCount -= 1;
+
+            Employee[] reduction;
+
+            reduction = new Employee[employeeCount];
+
+            for (int i = 0; i < employeeCount ; i++)
+            {
+                if (i >= num)
+                {
+                    reduction[i] = worker[i + 1];
+                }
+                else
+                {
+                    reduction[i] = worker[i];
+                }
+            }
+            worker = reduction;
+
+            Console.WriteLine("Employee was fired and the list of employees was updated");
+
         }
     }
    
