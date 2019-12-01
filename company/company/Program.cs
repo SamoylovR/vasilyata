@@ -60,7 +60,8 @@ namespace company
                             Console.WriteLine("1.Stock balance\n" +
                                 "2.Sale product from warehouse after the end of the day\n" +
                                 "3.Do not sell products after the end of the day\n" +
-                                "4.Back to the main menue");
+                                "4.Change the price of the product sold\n" +
+                                "5.Back to the main menue");
                             keyPress = Console.ReadKey();
                             if (keyPress.KeyChar == '1')
                             {
@@ -86,7 +87,22 @@ namespace company
                                 Console.WriteLine("You refuzed to sell production\n" +
                                     "Press any button...");
                                 Console.ReadKey();
-                            }else if (keyPress.KeyChar == '4')
+                            }else if (keyPress.KeyChar=='4')
+                            {
+                                Console.Clear();
+
+                                Console.WriteLine("Enter a new price. Too high price is bad for the sale of product\n" +
+                                    "Perfect price is 30$");
+                                sale.ProductPrice = ChekingForRightness.ChekingNumbers();
+
+                                Console.Clear();
+                                Console.WriteLine("New price accepted\n" +
+                                    "Press any button...");
+                                Console.ReadKey();
+
+                                Console.Clear();
+                            }
+                            else if (keyPress.KeyChar == '5')
                             {
                                 Console.Clear();
                                 break;
